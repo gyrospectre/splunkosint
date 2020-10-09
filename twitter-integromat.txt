@@ -1,0 +1,27 @@
+URL:
+https://http-inputs-<your Splunk Cloud Id>.splunkcloud.com/services/collector/event
+
+Method:
+POST
+
+Headers:
+Name: Authorization
+Value: Splunk <your Splunk HEC Token>
+
+Body Type:
+Raw
+
+Content Type:
+JSON (application/json)
+
+Request Content:
+{
+  "time": "{{timestamp}}",
+  "sourcetype":"twitter",
+  "event":{
+    "message": "{{encodeURL(4.text)}}",
+    "src_account": "{{4.user.screen_name}}",
+    "src_url": "{{encodeURL(4.source)}}",
+    "tweet_time": "{{formatDate(4.created_at; "DD/MM/YYYY HH:mm")}}"
+  }
+}
