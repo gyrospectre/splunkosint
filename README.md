@@ -22,7 +22,13 @@ https://help.twitter.com/en/using-twitter/twitter-lists
 4. Enter a name for your new index, leave the index type as ***Events***, and enter your preferred values for ***Max raw data size*** and ***Searchable time***. I went with 0GB (unlimited) and a 90 day rentention.
 5. Click ***Save*** to create your new index.
 6. Click ***Settings > Data inputs***
+
+<img src="images/splunk_datainputs.png" width=450>
+
 7. Under HTTP Event Collector, select the ***Add new*** option.
+
+<img src="images/splunk_newHec.png" width=450>
+
 8. Enter a name for your HEC input, and optionally a description.
 9. Click Next.
 10. Under ***Source type***, select ***Structured > _json***.
@@ -32,43 +38,53 @@ https://help.twitter.com/en/using-twitter/twitter-lists
 14. Make sure the details are correct, and then click the ***Submit*** to create your HEC input.
 15. You will be provided a token value, used in the next step.
 
+<img src="images/splunk_hecDone.png" width=250>
+
 ## Integromat Setup
 1. Login to Integromat.
 2. Click on ***Scenarios***.
 3. Click the ***Create a new scenario*** button. Skip the wizard.
 4. In the new scenario, right click anywhere on the canvas, and select ***Add a module***.
 
-![](images/int_addModule.png)
+<img src="images/int_addModule.png" width=200>
 
 5. Select ***Twitter***.
 
-![](images/int_addTwitter.png)
+<img src="images/int_addTwitter.png" width=450>
 
 6. Select ***Watch Tweets in List***.
 
-![](images/int_watchList.png)
+<img src="images/int_watchList.png" width=450>
+
 
 7. Click on the Twitter module to access it's settings.
 
-![](images/int_moduleConfig.png)
+<img src="images/int_moduleConfig.png" width=150>
 
 8. Click ***Add*** under Connection. Do the OAuth dance to autorise Integomat to connect to Twitter as you.
 9. Select *Search List* ***By ID*** and your watch list under *List ID*.
 10. Optionally, personalise the other settings to your needs.
-11. Add another module by right clicking on the canvas, this time adding a ***HTTP*** module.
-12. Configure the HTTP module according to the details in [twitter-integromat.txt](twitter-integromat.txt)
-13. Click on the clock icon in the lower left corner of the scenario, to configure the schedule.
+11. Add another module by right clicking on the canvas, this time adding a ***HTTP*** module. 
 
-![](images/int_scheduleSetting.png)
+<img src="images/int_httpMod.png" width=350>
 
-14. Set the flow to run ***At regular intervals***, for whatever time period you prefer. Click ***OK*** when done.
-15. Enable the schedule.
+12. Select the ***Make a request*** action.
 
-![](images/int_scheduleEnable.png)
+<img src="images/int_httpReq.png" width=350>
 
-16. Save the scenario by clicking on the floppy disk icon. If you are a millenial and don't know what a floppy disk is, it's the leftmost icon under *Controls*. ![](images/troll.png)
+13. Configure the HTTP module according to the details in [twitter-integromat.txt](twitter-integromat.txt)
+14. Click on the clock icon in the lower left corner of the scenario, to configure the schedule.
 
-![](images/int_saveScenario.png)
+<img src="images/int_scheduleSetting.png" width=350>
+
+15. Set the flow to run ***At regular intervals***, for whatever time period you prefer. Click ***OK*** when done.
+16. Enable the schedule.
+
+<img src="images/int_scheduleEnable.png" width="150">
+
+17. Save the scenario by clicking on the floppy disk icon. If you are a millenial and don't know what a floppy disk is, it's the leftmost icon under *Controls*. <img src="images/troll.png" width="24">
+
+<img src="images/int_saveScenario.png" width="350">
 
 ## Testing and Troubleshooting
 1. If you don't see anything , click the ***Run once*** button. Check for any errors, and ensure that your Twitter list has produced at least one updated tweet. If not, add some noisy Twitter accounts for testing purposes.
