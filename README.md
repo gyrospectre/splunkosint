@@ -61,7 +61,7 @@ https://help.twitter.com/en/using-twitter/twitter-lists
 
 <img src="images/int_moduleConfig.png" width=150>
 
-8. Click ***Add*** under Connection. Do the OAuth dance to autorise Integomat to connect to Twitter as you.
+8. Click ***Add*** under Connection. Do the OAuth dance to authorise Integomat to connect to Twitter as you.
 9. Select *Search List* ***By ID*** and your watch list under *List ID*.
 10. Optionally, personalise the other settings to your needs.
 11. Add another module by right clicking on the canvas, this time adding a ***HTTP*** module. 
@@ -82,7 +82,7 @@ https://help.twitter.com/en/using-twitter/twitter-lists
 
 <img src="images/int_scheduleEnable.png" width="150">
 
-17. Save the scenario by clicking on the floppy disk icon. If you are a millenial and don't know what a floppy disk is, it's the leftmost icon under *Controls*. <img src="images/troll.png" width="24">
+17. Save the scenario by clicking on the floppy disk icon. If you are a millennial and don't know what a floppy disk is, it's the leftmost icon under *Controls*. <img src="images/troll.png" width="24">
 
 <img src="images/int_saveScenario.png" width="350">
 
